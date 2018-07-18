@@ -1,15 +1,13 @@
-# Semantic_VSUM
+# Video Summarization by Visual and Categorical Diversity
 
-This project uses deep learning to evaluate different deep learning architectures for the task of Video Summarization using SumMe dataset proposed by Gigly et. al. 2014. Keras is the main framework used for this project.
+We propose a video summarization method based on visual and categorical diversity by transfer learning. Our method extracts visual and categorical features from a pre-trained deep convolutional network (DCN) and a pre-trained word embedding matrix. Using visual and categorical information we obtain video diversity, which it is used as an importance score to select segments from the input video that best describes it. Our method also allows to perform queries during the search process, in this way personalizing the resulting video summaries according to the particular intended purposes. The performance of the method is evaluated using different pre-trained DCN models in order to select the architecture with the best throughput. We then compare it with other state-of-art proposals in video summarization using a data-driven approach with the public dataset SumMe, which contains annotated videos with per-fragment importance. The results show that our method outperforms other proposals in most of the examples. As an additional advantage our method requires a simple and direct implementation that does not require a training stage.
 
-Files:
-	Deep_Description.ipynb: Python notebook that computes intermediate activations and classification labels for known archictectures of DCN (VGG16, XCeption, densenet, etc.). Also, computes the GloVe the mean activation for each video frame, with respect to the labels detected by DCN architectures.
-	S-VSUM.ipynb: Python notebook that uses DCN and GloVe activations for create a video summary of an input video from SumMe dataset. Then, calculate f-score with respect to human score using code provided by Gygli in SumMe dataset.
+__Files__:
+	demo_vsum_diversity.ipynb: Notebook with proposed method
 
-Folders:
-	Utils: 
-	video_dataset: SumMe dataset as provided by Gygli et. al. 2014.
-	pretrained-glove: glove.6B.100d embedding matrix.
-	DCN_outputs: frame-by-frame intermediate and labels activations for each DCN architecture evaluated.
-	DLM_outputs: frame-by-frame GloVe activation using labels detected by DCN architectures.
+__Folders__:
+	- Utils: Utility scripts to performs different tasks.
+	- video_dataset
+		- SumMe: SumMe dataset content must be added here.
+	- pretrained-glove: glove.6B.100d must be added from: https://nlp.stanford.edu/projects/glove/.
 
