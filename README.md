@@ -10,7 +10,3 @@ __Folders__:
 - video_dataset
 	- SumMe: SumMe dataset content must be added here.
 - pretrained-glove: glove.6B.100d must be added from: https://nlp.stanford.edu/projects/glove/.
-
-<hr>
-<iframe>
-	src="https://www.youtube.com/embed/QqLU-o7N7Kw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
